@@ -1,0 +1,484 @@
+/* Bellaria - a Delicious Cakes and Bakery HTML Template  */
+
+@media only screen and (max-width: 1280px){
+
+	.header-style-two{
+		position: relative;
+		background-color: #ffffff;
+	}
+
+	.main-header.header-style-two .cart-btn a, 
+	.header-style-two .search-box .search-btn, 
+	.header-style-two .main-menu .navigation > li > a{
+		color: #1c3545;
+	}
+
+	.header-style-three{
+		position: relative;
+		background-color: #ffffff;
+	}
+
+	.main-header.header-style-three .cart-btn a, 
+	.header-style-three .search-box .search-btn, 
+	.header-style-three .main-menu .navigation > li > a{
+		color: #1c3545;
+	}
+
+	.call-to-action.style-two{
+		padding: 120px 0;
+	}
+
+	.call-to-action.style-two h1{
+		font-size: 50px;
+	}
+
+}
+
+@media only screen and (max-width: 1139px){
+	.service-block-three{
+		margin-bottom: 50px;
+	}
+
+	.service-block-three .image{
+		margin-bottom: 0;
+	}
+
+	.features-section-three .image-column{
+		text-align: center;
+		order: 0;
+		margin-bottom: 50px;
+	}
+
+	.pricing-section.style-two .pricing-table .image-box .image{
+		width: 40%;
+	}
+
+	.video-section{
+		margin-top: -50px;
+		margin-bottom: -50px;
+	}
+
+	.demos-section .demo-column:nth-child(2),
+	.demos-section .demo-column:nth-child(3){
+		margin-top: 0;
+	}
+
+	.contact-section .column{
+		order: 1;
+	}
+
+	.screenshots-section .title-column,
+	.recipes-section-three .title-column{
+		margin-bottom: 50px;
+	}
+
+	.features-section-four{
+		padding: 100px 0 50px;
+	}
+	
+}
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+
+}
+
+@media only screen and (max-width: 1023px){
+	.hide-sm,
+	.main-header .menu_wave,
+	.main-header .main-box,
+	.sticky-header{
+		display: none !important;
+	}
+
+	.mobile-header,
+	.nav-outer .mobile-nav-toggler{
+		display: block;
+	}
+
+	.main-header .nav-outer .main-menu{
+		display: none;
+	}
+
+	.nav-outer .mobile-nav-toggler{
+		padding: 5px 0;
+	}
+
+	.call-to-action,
+	.call-to-action-two.style-three,
+	.testimonial-section{
+		padding: 100px 0;
+	}
+
+	.pricing-table .image-box{
+		top: -90px;
+	}
+
+	.about-section .content-box h1{
+		font-size: 60px;
+	}
+
+	.about-section .content-box p br{
+		display: none;
+	}
+
+	.fluid-section-one .content-column{
+		width: 50%;
+	}
+
+	.fluid-section-one .image-column{
+		display: none;
+	}
+
+	.fluid-section-one .content-column h2{
+		font-size: 32px;
+	}
+
+	.fluid-section-one .content-column .inner-column{
+		padding: 59px 15px;
+	}
+
+	.footer-form .form-group:last-child{
+		text-align: center;
+	}
+
+	.main-footer.style-four .social-widget{
+		padding-top: 0;
+	}
+
+	.main-footer.style-four .widgets-section{
+		padding: 50px 0 20px;
+	}
+
+	.pricing-section.style-two .pricing-table .image-box .image{
+		width: 50%;
+	}
+
+	.fluid-section-two,
+	.services-section-seven{
+		padding: 80px 0;
+	}
+
+	.service-block-seven p{
+		margin-bottom: 10px;
+	}
+
+	.call-to-action-three .shape_inner{
+		background-position: left center;
+	}
+
+	.fluid-section-two .content-column .inner-column{
+		margin: 0 auto;
+	}
+
+	.video-section{
+		min-height: 400px;
+	}
+
+	.portfolio-section.portfolio-wide .row,
+	.portfolio-section .row.masonry-items-container{
+		margin: 0 -15px;
+	}
+
+	.news-block.style-two .image-column,
+	.chef-section-two .content-column,
+	.chef-section .content-column{
+		order: 0;
+	}
+
+	.sec-title .text br{
+		display: none;
+	}
+
+	.news-block .content-column .inner-column,
+	.team-single .content-column .inner-column{
+		text-align: center;
+	}
+
+	.team-single{
+		padding: 80px 0;
+	}
+
+	.portfolio-block-four{
+		padding: 0 15px;
+	}
+
+	.portfolio-single .two-column .image-column{
+		margin-bottom: 30px;
+	}
+
+	.news-block .content-column{
+		margin-bottom: 0;
+	}
+
+	.recipe-fullscreen-model .cooked-fsm-ingredients{
+		padding: 5.5rem 1rem 1rem;
+	}
+
+}
+
+@media only screen and (max-width: 767px){
+	.page-title h1,
+	.login-section h2,
+	.call-to-action h1,
+	.call-to-action-two h2,
+	.call-to-action-three h2,
+	.video-section .content-box h2,
+	.prod-tabs .tabs-content .tab > .title,
+	.reservation-section-two .sec-title h2,
+	.sec-title h2{
+		font-size: 38px;
+		line-height: 1.2em;
+	}
+
+	.fluid-section-one .content-column{
+		width: 100%;
+	}
+
+	.fluid-section-one .image-column{
+		display: block;
+		width: 100%;
+	}
+
+	.fluid-section-one{
+		padding: 50px 0;
+	}
+
+	.main-footer.style-two .widgets-section{
+		padding: 100px 0 55px;
+	}
+
+	.about-section .feature-list li{
+		width: 100%;
+	}
+
+	.about-section{
+		padding: 100px 0 0px;
+	}
+
+	.call-to-action-two{
+		padding: 100px 0;
+	}
+
+	.features-section-three .right-column .feature-block-three .inner-box,
+	.feature-block-three .inner-box{
+		padding: 0;
+		text-align: center;
+	}
+
+	.features-section-three .right-column .feature-block-three .icon-box,
+	.feature-block-three .icon-box{
+		position: relative;
+		display: inline-block;
+		left: 0;
+		right: 0;
+		margin: 0 auto 20px;
+	}
+
+	.testimonial-section-three{
+		padding: 90px 0 60px;
+	}
+
+	.testimonial-section.style-two,
+	.pricing-section.style-two{
+		padding: 100px 0 100px;
+	}
+
+	.portfolio-section.pull-up{
+		margin-top: 0;
+	}
+
+	.page-title{
+		padding: 80px 0;
+	}
+
+	.chef-section .content-column .inner-column{
+		padding-top: 0;
+	}
+
+	.default-tabs{
+		padding: 15px;
+	    border: 3px solid #edecec;
+	    border-radius: 24px !important;
+	}
+
+	.default-tabs .tab-buttons{
+		background-color: transparent;
+		margin: 0;
+	}
+
+	.default-tabs .tab-buttons li{
+		display: block;
+		width: 100%;
+		padding: 14px 20px;
+		font-size: 16px;
+		background-color: #f6f5f5;
+		line-height: 1em;
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+
+	.default-tabs .tabs-content{
+		border:0;
+		padding: 0;
+	}
+
+	.accordion-box .block .acc-btn{
+		font-size: 20px;
+	}
+
+	.news-block .link-box,
+	.quote-box{
+	    padding: 20px 10% 30px;
+	}
+
+	.news-block .image-column .link-box .date,
+	.image-column .quote-box .date{
+		position: relative;
+		display: inline-block;
+		left: 0;
+		right: 0;
+		margin: 0 auto 30px;
+	}
+
+	.comment-form .form-group{
+		margin-bottom: 10px;
+	}
+
+	.mixitup-gallery .filter{
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.mixitup-gallery .filter:before{
+		display: none;
+	}
+
+	.recipe-fullscreen-model .cooked-fsm-ingredients,
+	.recipe-fullscreen-model .cooked-fsm-directions{
+		position: relative;
+		float: left;
+		width: 100%;
+		height: auto;
+	}
+
+	.recipe-fullscreen-model{
+		overflow: auto;
+	}
+
+	.recipe-fullscreen-model .cooked-fsm-directions{
+		padding: 3.5rem 1rem 1rem;
+	}
+}
+
+@media only screen and (max-width: 599px){
+	.call-to-action-two p br,
+	.call-to-action p br{
+		display: none;
+	}
+
+	.news-block h3,
+	.prod-tabs .tabs-content .tab > .title,
+	.news-block .link-box h3,
+	.checkout-page .sec-title h3,
+	.main-footer .widget-title h3{
+		font-size: 28px;
+		line-height: 1.2em;
+	}
+
+	blockquote{
+		font-size: 20px;
+		line-height: 1.4em;
+	}
+
+	.search-recipe-form .form-group{
+		margin: 0;
+	}
+
+	.search-recipe-form,
+	.cooked-recipe-search .browse-recipe{
+		width: 100%;
+		margin: 0;
+	}
+
+	.search-recipe-form .cooked-sortby-wrap{
+		position: relative;
+		max-width: 100%;
+		right: 0;
+	}
+
+	.cooked-recipe-info .cooked-servings .select2-container,
+	.search-recipe-form .select2-container{
+		width: 100% !important;
+	}
+
+	.browse-recipe .browse-dropdown{
+		width: 100%;
+		z-index: 100;
+	}
+
+	.cooked-recipe-search .search-recipe-submit{
+		top: auto;
+		bottom: 0;
+	}
+
+	.comment-form .form-outer{
+		padding: 20px 15px 20px;
+	}
+
+	.shop-upper-box .orderby,
+	.shop-upper-box .orderby .select2-container{
+		width: 100% !important;
+	}
+
+	.shop-upper-box .items-label{
+		width: 100%;
+		text-align: center;
+	}
+
+	.cart-section .apply-coupon .form-group{
+		width: 100%;
+		margin: 0 0 10px;
+	}
+
+	.cart-section .cart-options > div,
+	.cart-section .proceed-btn, 
+	.cart-section .cart-options .coupon-btn, 
+	.cart-section .cart-options .cart-btn,
+	.cart-section .apply-coupon .form-group input[type="text"]{
+		width: 100%;
+	}
+
+	.cart-section .cart-options{
+		padding: 30px 10px 20px;
+	}
+
+	.comments-area .comment{
+		padding-left: 0;
+	}
+
+	.comments-area .comment-box .author-thumb{
+		position: relative;
+		display: inline-block;
+	}
+
+	.call-to-action.style-two h1{
+		font-size: 40px;
+		line-height: 1.2em;
+		margin-bottom: 0;
+	}
+
+	.mobile-menu .nav-logo img{
+		max-width: 160px;
+	}
+	
+	.mobile-header .logo img{
+		width: 90%;
+	}
+
+}

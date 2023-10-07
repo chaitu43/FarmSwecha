@@ -1,0 +1,72 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 25/09/2017 13:47
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticond41d.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: flaticon;
+  font-size: inherit;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.flaticon-food-21:before { content: "\f100"; }
+.flaticon-food-20:before { content: "\f101"; }
+.flaticon-food-19:before { content: "\f102"; }
+.flaticon-food-18:before { content: "\f103"; }
+.flaticon-food-17:before { content: "\f104"; }
+.flaticon-note:before { content: "\f105"; }
+.flaticon-food-16:before { content: "\f106"; }
+.flaticon-technology:before { content: "\f107"; }
+.flaticon-food-15:before { content: "\f108"; }
+.flaticon-food-14:before { content: "\f109"; }
+.flaticon-food-13:before { content: "\f10a"; }
+.flaticon-fruit-1:before { content: "\f10b"; }
+.flaticon-food-12:before { content: "\f10c"; }
+.flaticon-black:before { content: "\f10d"; }
+.flaticon-food-11:before { content: "\f10e"; }
+.flaticon-food-10:before { content: "\f10f"; }
+.flaticon-food-9:before { content: "\f110"; }
+.flaticon-check:before { content: "\f111"; }
+.flaticon-fruit:before { content: "\f112"; }
+.flaticon-cake:before { content: "\f113"; }
+.flaticon-strawberry:before { content: "\f114"; }
+.flaticon-food-8:before { content: "\f115"; }
+.flaticon-commerce:before { content: "\f116"; }
+.flaticon-shapes:before { content: "\f117"; }
+.flaticon-food-7:before { content: "\f118"; }
+.flaticon-food-6:before { content: "\f119"; }
+.flaticon-coffee-machine:before { content: "\f11a"; }
+.flaticon-food-5:before { content: "\f11b"; }
+.flaticon-food-4:before { content: "\f11c"; }
+.flaticon-drink:before { content: "\f11d"; }
+.flaticon-food-3:before { content: "\f11e"; }
+.flaticon-food-2:before { content: "\f11f"; }
+.flaticon-food-1:before { content: "\f120"; }
+.flaticon-food:before { content: "\f121"; }
+.flaticon-social-media-3:before { content: "\f122"; }
+.flaticon-social-media-2:before { content: "\f123"; }
+.flaticon-play:before { content: "\f124"; }
+.flaticon-social-media-1:before { content: "\f125"; }
+.flaticon-social-media:before { content: "\f126"; }
+.flaticon-cup:before { content: "\f127"; }
+.flaticon-nature:before { content: "\f128"; }

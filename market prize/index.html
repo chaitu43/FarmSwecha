@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Market Price Checker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <center><h1>know the market prize for your crop</h1></center>
+  <br>
+  <div class="center-form">
+    <form>
+  <label for="product">Choose a product:</label>
+
+<select id="product" style="width: 200px;height: 50px;">
+  <option value="rice">బియ్యం</option>
+  <option value="cheruku">చెరకు</option>
+  <option value="jowar">జొన్న</option>
+  <option value="mirapakayalu">మిరపకాయలు</option>
+  <option value="mokajonna">మొక్కజొన్న</option>
+  
+  <option value="patti">పత్తి</option>
+</select>
+<br><br><br>
+
+<label for="quantity">Enter quantity:</label>
+<input type="number" id="quantity" style="width: 200px; height: 50px;">
+<br><br><br>
+
+<button type="button" onclick="calculatePrice()">Calculate Price</button>
+</form>
+</div>
+<p id="result" style="color:rgb(255, 255, 255); background-color: black; font-size: 50px; text-align: center;"></p>
+  <script src="script.js"></script>
+</body>
+<center><a href="../index.html"><button>Go Back!</button></a></center>
+</html>
