@@ -7,7 +7,7 @@ function testSoil() {
 	let results = "";
 
 	if (ph>=1 && ph < 7) {
-		results += "The soil is too acidic. ";
+		results +=  "The soil is too acidic. ";
 	} else if (ph > 7 && ph <= 14) {
 		results += "The soil is too alkaline. ";
 	}
@@ -48,6 +48,17 @@ function testSoil() {
 	else if (potassium > 150) {
 		results += "The soil is High in potassium. ";
 	}
-	
-	document.getElementById("results").innerHTML = results;
+
+	if(!ph && !nitrogen && !potassium && !phosphorus)
+	{
+		document.getElementById("results").innerHTML = results;
+	}
+	else
+	{
+		document.getElementById("results").innerHTML = 'Result: ' +results;
+	}
+
+    
+
 }
+
