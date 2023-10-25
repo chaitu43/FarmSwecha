@@ -3,45 +3,106 @@
 <head>
 	<title>Soil Testing Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+	</style>
+	<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 <body>
-	<center><h1>Soil Testing</h1></center>
-	<center><img src="soiltesting.webp" alt="soil testing"></center>
-	<p>
-		Soil testing is the process of analyzing soil samples to determine their nutrient content, pH level, organic matter content, and other important characteristics.
+	<div class="row" style="height: 40px;"></div>
+	<div class="container">
+	<center><h1 style="color: #654321;text-decoration: underline;">Soil Testing</h1></center>
+	<div class="row" style="height: 30px;"></div>
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8" style="text-align: center;"><img src="soiltesting1.jpg" style="width: 60%;height: 80%;" alt="soil testing"></div>
+			<div class="col-2"></div>
+		    
+		</div>
+		<div class="row">
+			<p>
+				Soil testing is the process of analyzing soil samples to determine their nutrient content, pH level, organic matter content, and other important characteristics.
+		
+			  It is an important tool for farmers, gardeners, and landscapers to help them make informed decisions about what crops or plants to grow and how much fertilizer or other amendments to apply.
+		
+		      Soil testing can also help identify potential problems with soil quality, such as high levels of heavy metals or contaminants, which can affect plant growth and pose a risk to human health if consumed.
+		
+		      By providing information about the specific needs of the soil, soil testing can help reduce the use of fertilizer and other inputs, which can save money and reduce environmental impacts.
+		
+		      Soil testing can be done through a variety of methods, including sending samples to a laboratory for analysis or using a handheld testing kit.
+		
+		      Overall, soil testing is an important practice for anyone who wants to promote healthy plant growth, maximize crop yields, and protect the environment.
+			</p>
+		</div>
 
-     It is an important tool for farmers, gardeners, and landscapers to help them make informed decisions about what crops or plants to grow and how much fertilizer or other amendments to apply.
-
-Soil testing can also help identify potential problems with soil quality, such as high levels of heavy metals or contaminants, which can affect plant growth and pose a risk to human health if consumed.
-
-By providing information about the specific needs of the soil, soil testing can help reduce the use of fertilizer and other inputs, which can save money and reduce environmental impacts.
-
-Soil testing can be done through a variety of methods, including sending samples to a laboratory for analysis or using a handheld testing kit.
-
-Overall, soil testing is an important practice for anyone who wants to promote healthy plant growth, maximize crop yields, and protect the environment.
-	</p>
-	<center><h1>Test Your Soil</h1></center>
-	<div class="center-form">
-	<form>
-		<label for="ph">pH:</label>
-		<input type="number" id="ph" placeholder="Enter ph (1-14)" size=10>
-
-		<label for="nitrogen">Nitrogen (mg-N/kg)</label>
-		<input type="number" id="nitrogen" placeholder="Enter nitrogen" size=10>
-
-		<label for="phosphorus">Phosphorus (ppm):</label>
-		<input type="number" id="phosphorus" placeholder="Enter phosphorus" size=10>
-
-		<label for="potassium">Potassium (mg/kg):</label>
-		<input type="number" id="potassium" placeholder="Enter potassium" size=10>
-
-		<button type="button" onclick="testSoil()">Test Soil</button>
-	</form>
+<hr>
+	<div class="card" style="background-color: #d9fcd5;border-radius: 20px;border-width: thin;border-color: #46973b;">
+	<div class="card-body">
+		<center><h1 style="color: #000000;">Test Your Soil</h1></center>
+		<div class="row" style="height: 25px;"></div>
+		<div class="row">
+			<div class="col-4">
+				<label for="ph" style="font-weight: bold;">pH:</label>
+			</div>
+			<div class="col-8">
+				<input type="number" style="width: 90%;" class="roundedinput" id="ph" placeholder="Enter pH (1-14) value" size=10 required>
+			</div>
+		</div>
+		<div class="row" style="height: 10px;"></div>
+		<div class="row">
+			<div class="col-4">
+				<label for="nitrogen" style="font-weight: bold;">Nitrogen (mg-N/kg)</label>			
+		    </div>
+			<div class="col-8">
+				<input type="number" style="width: 90%;" class="roundedinput" id="nitrogen" placeholder="Enter nitrogen value" size=10 required>
+			</div>
+	    </div>
+		<div class="row" style="height: 10px;"></div>
+		<div class="row">
+			<div class="col-4">
+				<label for="phosphorus" style="font-weight: bold;">Phosphorus (ppm):</label>			
+		    </div>
+			<div class="col-8">
+				<input type="number" style="width: 90%;" class="roundedinput" id="phosphorus" placeholder="Enter phosphorus value" size=10 required> 
+			</div>
+	    </div>
+		<div class="row" style="height: 10px;"></div>
+		<div class="row">
+			<div class="col-4">
+				<label for="potassium" style="font-weight: bold;">Potassium (mg/kg):</label>			
+		    </div>
+			<div class="col-8">
+				<input type="number" style="width: 90%;" class="roundedinput" id="potassium" placeholder="Enter potassium value" size=10 required>
+			</div>
+	    </div>
+		<div class="row" style="height: 30px;"></div>
+		<div class="row" style="text-align: center;">
+			<div class="col">
+			<button type="button" style="background-color: #46973b;color: white;border-radius: 30px;border:none;width:30%;font-weight: 500;font-size: larger;height: 65px;" onclick="testSoil()">Test Soil</button>
+		</div>
+		</div>
+		
+		<div id="results" style="color:#000000; font-size: x-large;font-weight: bold; text-align: center;text-decoration: underline;"></div>
+	</div>
 	</div>
 
-	<div id="results" style="color:rgb(255, 255, 255); background-color: black; font-size: 50px; text-align: center;"></div>
+
 
 	<script src="script.js"></script>
-	<center><a href="../index.html"><button>Go Back!</button></a></center>
+	<div class="row" style="height: 65px;"></div>
+	<div class="row" style="text-align: center;">
+		<div class="col">
+			<a href="../index.html"><button style="background-color: #cf5b23;color: white;border-radius: 30px;border:none;width:30%;font-weight: 500;font-size: larger;height: 65px;">Go Back!</button></a>
+		</div>
+	
+    </div>
+</div>
 </body>
 </html>
