@@ -1,20 +1,40 @@
 function calculatePrice() {
   var product = document.getElementById("product").value;
-  var quantity = document.getElementById("quantity").value;
-  var price;
+  var quantity = parseFloat(document.getElementById("quantity").value);
+  var resultElem = document.getElementById("result");
 
-  if (product === "rice") {
-    price = 3150;
-  } else if (product === "cheruku") {
-    price = 3500;
-  } else if (product === "jowar") {
-    price = 2990;
-  } else if (product === "mirapakayalu") {
-    price = 28000;
-  } else if (product === "mokajonna") {
-    price = 2017;
+  // Product price map
+  var prices = {
+    rice: 3150,
+    cheruku: 3500,
+    jowar: 2990,
+    mirapakayalu: 28000,
+    mokajonna: 2017,
+    patti: 6500 // Example price for cotton
+  };
+
+  // Product name map for display
+  var productNames = {
+    rice: "Rice (బియ్యం)",
+    cheruku: "Sugar Cane (చెరకు)",
+    jowar: "Jowar (జొన్న)",
+    mirapakayalu: "Chili (మిరపకాయలు)",
+    mokajonna: "Corn (మొక్కజొన్న)",
+    patti: "Cotton (పత్తి)"
+  };
+
+  if (!product || !(product in prices)) {
+    resultElem.innerHTML = "Please select a valid product.";
+    return;
   }
+  if (isNaN(quantity) || quantity <= 0) {
+    resultElem.innerHTML = "Please enter a valid quantity.";
+    return;
+  }
+
+  var price = prices[product];
   var totalPrice = price * quantity;
 
-  document.getElementById("result").innerHTML = "The total price for " + quantity + " " + product + "(s) is " + totalPrice.toFixed(2);
+  resultElem.innerHTML =
+    `The total price for <b>${quantity}</b> unit(s) of <b>${productNames[product]}</b> is <span style="color:yellow;">₹${totalPrice.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
 }
