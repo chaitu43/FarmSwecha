@@ -1,30 +1,20 @@
 function checkPrice() {
-	const items = parseFloat(document.getElementById("item").value);
-
+	const item = document.getElementById("item").value;
 	let results = "";
 
-	if (items == "rice") {
-		results += " బియ్యం ధర క్వింటాల్‌కు ₹3150 ";
-	} 
+	const prices = {
+		rice: "బియ్యం ధర క్వింటాల్‌కు ₹3150",
+		cheruku: "చెరకు ధర క్వింటాలుకు ₹3500",
+		jowar: "జొన్న ధర 2990 / క్వింటాల్",
+		mokkajona: "మొక్కజొన్న ధర 2017 / క్వింటాల్",
+		mirapakayalu: "మిరపకాయలు ధర 28000 / క్వింటాల్",
+		patti: "పత్తి ధర క్వింటాల్‌కు 4267"
+	};
 
-	if (items == "cheruku") {
-		results += " చెరకు ధర క్వింటాలుకు ₹3500 ";
-	}
-
-	if (items == "jowar") {
-		results += "జొన్న ధర 2990 / క్వింటాల్ ";
-	}
-
-	if (items == "mokkajona") {
-		results += " మొక్కజొన్న ధర 2017/క్వింటాల్ ";
-	}
-
-    if (items == "mirapakayalu") {
-		results += " మిరపకాయలు ధర 28000  / క్వింటాల్ ";
-	}
-
-    if (items == "patti") {
-		results += " పత్తి ధర క్వింటాల్‌కు 4267 ";
+	if (prices[item]) {
+		results = prices[item];
+	} else {
+		results = "Please select a valid item.";
 	}
 
 	document.getElementById("results").innerHTML = results;
