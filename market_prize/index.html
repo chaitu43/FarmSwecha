@@ -7,28 +7,24 @@
 </head>
 
 <body>
-  <br>
-  <div class="center-form">
-    <form>
-  <label for="product">Choose a product:</label>
-
-<select id="product" style="width: 200px;height: 50px;">
-  <option value="rice">Rice - <a lang="te">బియ్యం</a></option>
-  <option value="cheruku">Sugar Cane - <a lang="te">చెరకు</a></option>
-  <option value="jowar">Jowar - <a lang="te">జొన్న</option>
-  <option value="mirapakayalu">Chili - <a lang="te"></a>మిరపకాయలు</a></option>
-  <option value="mokajonna">Corn - <a lang="te">మొక్కజొన్న</a></option>
-  <option value="patti">Cotton - <a lang="te">పత్తి</a></option>
-</select>
-<br><br><br>
-
-<label for="quantity">Enter quantity:</label>
-<input type="number" id="quantity" style="width: 200px; height: 50px;">
-<br><br><br>
-
-<button type="button" onclick="calculatePrice()">Calculate Price</button>
-</form>
-</div>
+    <div class="center-form">
+      <form>
+        <label for="product">Choose a product:</label>
+        <select id="product" style="width: 200px;height: 50px; margin-bottom: 30px;">
+          <option value="rice">Rice - <a lang="te">బియ్యం</a></option>
+          <option value="cheruku">Sugar Cane - <a lang="te">చెరకు</a></option>
+          <option value="jowar">Jowar - <a lang="te">జొన్న</option>
+          <option value="mirapakayalu">Chili - <a lang="te"></a>మిరపకాయలు</a></option>
+          <option value="mokajonna">Corn - <a lang="te">మొక్కజొన్న</a></option>
+          <option value="patti">Cotton - <a lang="te">పత్తి</a></option>
+        </select>
+        <div style="height: 30px;"></div>
+        <label for="quantity">Enter quantity:</label>
+        <input type="number" id="quantity" style="width: 200px; height: 50px; margin-bottom: 30px;">
+        <div style="height: 30px;"></div>
+        <button type="button" onclick="calculatePrice()">Calculate Price</button>
+      </form>
+    </div>
 <p id="result" style="color:rgb(255, 255, 255); background-color: black; font-size: 50px; text-align: center;"></p>
   <script src="script.js"></script>
 </body>
