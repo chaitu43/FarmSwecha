@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Testing Service | Farm Swecha</title>
+    <meta name="description" content="Submit your soil samples for detailed nutrients analysis and personalized crop recommendations.">
+    <meta name="keywords" content="Soil Testing, Soil Health, Nutrient Analysis, Crop Recommendation">
+    <meta property="og:title" content="Soil Testing Service | Farm Swecha">
+    <meta property="og:description" content="Submit your soil samples for detailed nutrients analysis and personalized crop recommendations.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="background: #fdfdfd;">
+
+    <nav>
+        <div class="logo"><a href="index.html" style="color: var(--primary-dark);">Farm<span>Swecha</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+        </ul>
+        <a href="index.html" class="btn btn-outline">Back Home</a>
+    </nav>
+
+    <div style="padding: 150px 10% 60px; display: flex; align-items: center; gap: 5rem;">
+        <div style="flex: 1;">
+            <span class="lesson-tag">Scientific Farming</span>
+            <h1 style="font-size: 3.5rem; margin-top: 1.5rem;">Professional Soil Testing</h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted); margin: 1.5rem 0;">Get accurate data about your
+                soil's health and discover the perfect nutrient balance for your crops.</p>
+
+            <ul style="margin: 2rem 0;">
+                <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                        style="color: var(--primary); margin-right: 0.5rem;"></i> Macro & Micronutrient Analysis</li>
+                <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                        style="color: var(--primary); margin-right: 0.5rem;"></i> pH Level Identification</li>
+                <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                        style="color: var(--primary); margin-right: 0.5rem;"></i> Personalized Fertilizer Roadmap</li>
+            </ul>
+        </div>
+        <div style="flex: 1; background: white; padding: 3rem; border-radius: 30px; box-shadow: var(--shadow);">
+            <h3 style="margin-bottom: 2rem;">Request a Collection</h3>
+            <form id="soilForm">
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Farm Address</label>
+                    <textarea rows="3" placeholder="Detailed address for sample collection"
+                        style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid #ddd; outline: none;"
+                        required></textarea>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Farm Size (Acres)</label>
+                    <input type="number" placeholder="5"
+                        style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid #ddd; outline: none;"
+                        required>
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Last Crop Harvested</label>
+                    <input type="text" placeholder="Rice"
+                        style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid #ddd; outline: none;"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Schedule
+                    Collection</button>
+            </form>
+        </div>
+    </div>
+
+    <section style="background: var(--bg-soft); padding: 80px 10%;">
+        <h2 style="text-align: center; margin-bottom: 4rem;">How It Works</h2>
+        <div class="features-grid">
+            <div style="text-align: center;">
+                <div
+                    style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; font-weight: 800;">
+                    1</div>
+                <h4>Request Call</h4>
+                <p>Fill the form and our expert will call you.</p>
+            </div>
+            <div style="text-align: center;">
+                <div
+                    style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; font-weight: 800;">
+                    2</div>
+                <h4>Sample Collection</h4>
+                <p>We collect soil samples directly from your farm.</p>
+            </div>
+            <div style="text-align: center;">
+                <div
+                    style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; font-weight: 800;">
+                    3</div>
+                <h4>Digital Report</h4>
+                <p>Receive your detailed soil report on WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

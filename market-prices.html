@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Prices | Farm Swecha</title>
+    <meta name="description" content="Stay updated with current crop prices in various markets to ensure you get the best value for your harvest.">
+    <meta name="keywords" content="Crop Prices, Market Rates, Mandi Prices, Agriculture Market">
+    <meta property="og:title" content="Market Prices | Farm Swecha">
+    <meta property="og:description" content="Stay updated with current crop prices in various markets to ensure you get the best value for your harvest.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .market-header {
+            padding: 120px 10% 40px;
+            background: var(--bg-soft);
+            text-align: center;
+        }
+
+        .market-container {
+            padding: 60px 10%;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .price-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .price-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .trend-up {
+            color: #27ae60;
+        }
+
+        .trend-down {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html" style="color: var(--primary-dark);">Farm<span>Swecha</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="farming-llm.html">Farming AI</a></li>
+        </ul>
+        <div class="search-container" style="display: flex; gap: 10px; align-items: center;">
+            <input type="text" id="market-input" placeholder="Search Market..."
+                style="padding: 0.8rem 1.5rem; border-radius: 30px; border: 1px solid var(--primary-light); outline: none;">
+            <button id="search-market-btn" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </div>
+    </nav>
+
+    <header class="market-header">
+        <h1>Current Market Prices</h1>
+        <p style="color: var(--text-muted); margin-top: 1rem;">Last updated: <span id="update-time">Today, 10:30
+                AM</span> | Market: <span id="market-name">Guntur (Mandi)</span>
+        </p>
+    </header>
+
+    <div class="market-container">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Commodity</th>
+                    <th>Variety</th>
+                    <th>Price (per Quintal)</th>
+                    <th>Change</th>
+                    <th>Trend</th>
+                </tr>
+            </thead>
+            <tbody id="price-tbody">
+                <!-- Price rows will be injected here -->
+            </tbody>
+        </table>
+
+        <div style="margin-top: 3rem; background: var(--bg-soft); padding: 2rem; border-radius: 20px;">
+            <h3 style="margin-bottom: 1rem;"><i class="fas fa-lightbulb"
+                    style="color: var(--primary); margin-right: 0.5rem;"></i> Market Insight</h3>
+            <p id="market-advice">Cotton prices are showing a strong upward trend due to increased export demand.
+                Farmers might consider
+                holding stock for another week for potentially better margins.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2026 Farm Swecha. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="market.js"></script>
+</body>
+
+</html>

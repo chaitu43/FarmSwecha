@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast | Farm Swecha</title>
+    <meta name="description"
+        content="Get precise, local weather updates and alerts to plan your farming activities and irrigation effectively.">
+    <meta name="keywords" content="Farming Weather, Agriculture Forecast, Local Weather Updates">
+    <meta property="og:title" content="Weather Forecast | Farm Swecha">
+    <meta property="og:description"
+        content="Get precise, local weather updates and alerts to plan your farming activities and irrigation effectively.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .weather-container {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 100px 10%;
+            min-height: 80vh;
+        }
+
+        .weather-container h1,
+        .location-modal h2 {
+            color: white;
+        }
+
+        .weather-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            border-radius: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .current-weather {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .temp {
+            font-size: 5rem;
+            font-weight: 800;
+        }
+
+        .forecast-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .forecast-day {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 20px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .location-modal {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            border-radius: 30px;
+            max-width: 500px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html" style="color: var(--primary-dark);">Farm<span>Swecha</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="farming-llm.html">Farming AI</a></li>
+        </ul>
+        <div class="search-container" style="display: flex; gap: 10px; align-items: center;">
+            <input type="text" id="city-input" placeholder="Search City..."
+                style="padding: 0.8rem 1.5rem; border-radius: 30px; border: 1px solid var(--primary-light); outline: none;">
+            <button id="search-btn" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </div>
+    </nav>
+
+    <div class="weather-container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1>Weather for <span id="location-name">Guntur, AP</span></h1>
+            <p>Precise data for better irrigation and pest control planning.</p>
+        </div>
+
+        <div class="weather-card">
+            <div class="current-weather">
+                <div>
+                    <div class="temp" id="current-temp">28°C</div>
+                    <div id="weather-desc" style="font-size: 1.5rem; opacity: 0.8;">Partly Cloudy</div>
+                    <div style="margin-top: 1rem;">
+                        <span id="humidity" style="margin-right: 1.5rem;"><i class="fas fa-tint"></i> 64%
+                            Humidity</span>
+                        <span id="wind-speed"><i class="fas fa-wind"></i> 12 km/h Wind</span>
+                    </div>
+                </div>
+                <i id="weather-icon" class="fas fa-cloud-sun" style="font-size: 8rem; color: #ffd700;"></i>
+            </div>
+
+            <h3 style="color: white; margin-bottom: 1.5rem;">5-Day Forecast</h3>
+            <div id="forecast-grid" class="forecast-grid">
+                <!-- Forecast items will be injected here -->
+            </div>
+
+            <div
+                style="background: rgba(16, 185, 129, 0.2); padding: 1.5rem; border-radius: 20px; margin-top: 3rem; display: flex; align-items: center; gap: 1rem;">
+                <i class="fas fa-info-circle" style="font-size: 1.5rem; color: var(--accent);"></i>
+                <p id="weather-advice">Farmers are advised to delay fertilizing until Thursday due to expected rain
+                    showers.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="location-modal" class="modal-overlay">
+        <div class="location-modal">
+            <i class="fas fa-location-dot" style="font-size: 3rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+            <h2>Check Local Weather?</h2>
+            <p style="margin-top: 1rem; opacity: 0.9;">Would you like to use your current location to get the most
+                accurate weather forecast and farming advice?</p>
+            <div class="modal-btns">
+                <button id="allow-location" class="btn btn-primary">Allow Access</button>
+                <button id="close-modal" class="btn btn-outline" style="color: white; border-color: white;">Enter City
+                    Manually</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2026 Farm Swecha. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>

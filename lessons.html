@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Lessons | Farm Swecha</title>
+    <meta name="description"
+        content="Explore comprehensive farming guides and lessons for major crops including cereals, millets, pulses, oilseeds, and cash crops.">
+    <meta name="keywords" content="Farming Lessons, Agriculture Guides, Crop Cultivation, Indian Farming">
+    <meta property="og:title" content="Farming Lessons | Farm Swecha">
+    <meta property="og:description"
+        content="Explore comprehensive farming guides and lessons for major crops including cereals, millets, pulses, oilseeds, and cash crops.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .category-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(6, 78, 59, 0.7), rgba(6, 78, 59, 0.7)), url('assets/images/hero.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .category-hero h1 {
+            color: white;
+        }
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            padding: 4rem 10%;
+        }
+
+        .lesson-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .lesson-item:hover {
+            transform: scale(1.02);
+        }
+
+        .lesson-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .lesson-content {
+            padding: 2rem;
+        }
+
+        .lesson-tag {
+            background: var(--bg-soft);
+            color: var(--primary-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Farm<span>Swecha</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="lessons.html" class="active">Lessons</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="farming-llm.html">Farming AI</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a href="form.html" class="btn btn-primary">Join Community</a>
+    </nav>
+
+    <header class="category-hero">
+        <div>
+            <h1>Agriculture Learning Center</h1>
+            <p>Master the art and science of farming with our expert guides.</p>
+        </div>
+    </header>
+
+    <section style="padding: 4rem 10%;">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2>Explore by Category</h2>
+            <p style="color: var(--text-muted);">Find specialized guides for every major crop in Andhra Pradesh.</p>
+        </div>
+
+        <!-- Cereals -->
+        <h3 style="margin: 3rem 0 1.5rem; border-left: 5px solid var(--primary); padding-left: 1rem;">Cereals</h3>
+        <div class="lessons-grid" style="padding: 0; margin-bottom: 4rem;">
+            <!-- Rice -->
+            <div class="lesson-item">
+                <div class="lesson-img" style="background-image: url('assets/images/rice.png');"></div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Cereals</span>
+                    <h3 style="margin: 1rem 0;">Rice Cultivation</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">The ultimate guide to high-yield rice
+                        varieties.</p>
+                    <a href="rice-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+            <!-- Maize -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/maize.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Cereals</span>
+                    <h3 style="margin: 1rem 0;">Maize Farming</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Soil prep and nutrient management for
+                        corn.</p>
+                    <a href="maize-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Millets -->
+        <h3 style="margin: 3rem 0 1.5rem; border-left: 5px solid var(--primary); padding-left: 1rem;">Millets</h3>
+        <div class="lessons-grid" style="padding: 0; margin-bottom: 4rem;">
+            <!-- Jowar -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/Jowar.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Millets</span>
+                    <h3 style="margin: 1rem 0;">Jowar (Sorghum)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Drought-resistant farming techniques.
+                    </p>
+                    <a href="jowar-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+            <!-- Bajra -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/bajra.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Millets</span>
+                    <h3 style="margin: 1rem 0;">Bajra (Pearl Millet)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Growing resilient millets in arid
+                        regions.</p>
+                    <a href="bajra-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+            <!-- Ragi -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/ragi.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Millets</span>
+                    <h3 style="margin: 1rem 0;">Ragi (Finger Millet)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Essential guide for high-nutritional
+                        crops.</p>
+                    <a href="ragi-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pulses -->
+        <h3 style="margin: 3rem 0 1.5rem; border-left: 5px solid var(--primary); padding-left: 1rem;">Pulses</h3>
+        <div class="lessons-grid" style="padding: 0; margin-bottom: 4rem;">
+            <!-- Red Gram -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/redgram.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Pulses</span>
+                    <h3 style="margin: 1rem 0;">Red Gram (Tur)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Sustainable cultivation of pigeon peas.
+                    </p>
+                    <a href="red-gram-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+            <!-- Green Gram -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/greengram.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Pulses</span>
+                    <h3 style="margin: 1rem 0;">Green Gram (Moong)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Short-duration pulses management.</p>
+                    <a href="green-gram-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+            <!-- Black Gram -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/blackgram.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Pulses</span>
+                    <h3 style="margin: 1rem 0;">Black Gram (Urad)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Soil enrichment through pulse farming.
+                    </p>
+                    <a href="black-gram-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+            <!-- Bengal Gram -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/bengalgram.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Pulses</span>
+                    <h3 style="margin: 1rem 0;">Bengal Gram (Chickpea)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Rabi season pulse cultivation guide.</p>
+                    <a href="bengal-gram-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+            <!-- Soybean -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/soybean.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Pulses</span>
+                    <h3 style="margin: 1rem 0;">Soybean Farming</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Industrial and commercial farming tips.
+                    </p>
+                    <a href="soybean-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+            <!-- Lentil -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/lentil.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Pulses</span>
+                    <h3 style="margin: 1rem 0;">Lentil Farming</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Cool-season legume best practices.</p>
+                    <a href="lentil-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oilseeds -->
+        <h3 style="margin: 3rem 0 1.5rem; border-left: 5px solid var(--primary); padding-left: 1rem;">Oilseeds</h3>
+        <div class="lessons-grid" style="padding: 0; margin-bottom: 4rem;">
+            <!-- Groundnut -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/groundnut.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Oilseeds</span>
+                    <h3 style="margin: 1rem 0;">Groundnut Farming</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Soil prep and pest control for peanuts.
+                    </p>
+                    <a href="groundnut-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+            <!-- Sun Flower -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/sunflower.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Oilseeds</span>
+                    <h3 style="margin: 1rem 0;">Sun Flower</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Commercial oil production techniques.
+                    </p>
+                    <a href="sunflower-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+            <!-- Safflower -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/safflower.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Oilseeds</span>
+                    <h3 style="margin: 1rem 0;">Safflower</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Growing hardy oilseeds in drylands.</p>
+                    <a href="safflower-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+            <!-- Gingelly -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/gingelly.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Oilseeds</span>
+                    <h3 style="margin: 1rem 0;">Gingelly (Sesame)</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Ancient oilseed cultivation guide.</p>
+                    <a href="gingelly-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+            <!-- Castor -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/castor.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Oilseeds</span>
+                    <h3 style="margin: 1rem 0;">Castor Farming</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">High-yield non-edible oil
+                        production.</p>
+                    <a href="castor-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cash Crops -->
+        <h3 style="margin: 3rem 0 1.5rem; border-left: 5px solid var(--primary); padding-left: 1rem;">Cash Crops</h3>
+        <div class="lessons-grid" style="padding: 0; margin-bottom: 4rem;">
+            <!-- Cotton -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/cotton.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Cash Crops</span>
+                    <h3 style="margin: 1rem 0;">Cotton Management</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Advanced pest control for white gold.
+                    </p>
+                    <a href="cotton-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+            <!-- Chilli -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/chilli.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Cash Crops</span>
+                    <h3 style="margin: 1rem 0;">Chilli Farming</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Spice cultivation and export quality.
+                    </p>
+                    <a href="chilli-lesson.html" class="btn btn-outline" style="width: 100%; text-align: center;">Start
+                        Lesson</a>
+                </div>
+            </div>
+            <!-- Sugarcane -->
+            <div class="lesson-item">
+                <div class="lesson-img"
+                    style="background-image: url('assets/images/sugarcane.jpeg');">
+                </div>
+                <div class="lesson-content">
+                    <span class="lesson-tag">Cash Crops</span>
+                    <h3 style="margin: 1rem 0;">Sugarcane</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Water-intensive crop management.</p>
+                    <a href="sugarcane-lesson.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center;">Start Lesson</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2026 Farm Swecha. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>

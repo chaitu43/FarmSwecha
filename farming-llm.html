@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming AI | Farm Swecha</title>
+    <meta name="description"
+        content="Get instant agricultural advice and pest control solutions from the Farm Swecha intelligent AI assistant.">
+    <meta name="keywords" content="Farming AI, Agriculture Bot, AI crop advice, Pest control AI">
+    <meta property="og:title" content="Farming AI | Farm Swecha">
+    <meta property="og:description"
+        content="Get instant agricultural advice and pest control solutions from the Farm Swecha intelligent AI assistant.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .llm-container {
+            background: linear-gradient(135deg, var(--primary-dark), #022c22);
+            color: white;
+            padding: 100px 10%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .llm-container h1 {
+            color: white;
+        }
+
+        .chat-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            width: 100%;
+            max-width: 1000px;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .chat-header {
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ff4d4d;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #ff4d4d;
+        }
+
+        .status-dot.online {
+            background: #27ae60;
+            box-shadow: 0 0 10px #27ae60;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            line-height: 1.6;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            background: var(--primary);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.ai {
+            align-self: flex-start;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-bottom-left-radius: 5px;
+        }
+
+        .chat-input-area {
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 1rem;
+        }
+
+        #user-input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1rem 1.5rem;
+            color: white;
+            outline: none;
+            resize: none;
+            font-family: inherit;
+        }
+
+        #user-input:focus {
+            border-color: var(--primary);
+        }
+
+        .send-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+        }
+
+        .send-btn:hover {
+            transform: scale(1.05);
+            background: var(--primary-dark);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Markdown Styles */
+        .message.ai ul,
+        .message.ai ol {
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .message.ai li {
+            margin-bottom: 0.3rem;
+        }
+
+        .message.ai p {
+            margin-bottom: 0.5rem;
+        }
+
+        .message.ai p:last-child {
+            margin-bottom: 0;
+        }
+
+        .message.ai strong {
+            color: var(--accent);
+            /* Replaced old --primary-light which blended into background */
+            font-weight: 800;
+        }
+
+        .message.ai em {
+            color: white;
+            font-style: italic;
+        }
+
+        .message.ai a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .message.ai code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            color: var(--accent);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html" style="color: var(--primary-dark);">Farm<span>Swecha</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+        </ul>
+    </nav>
+
+    <div class="llm-container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1>Farming AI Assistant</h1>
+            <p>Powered by Groq AI for Indian farmers. Get instant advice in your language.</p>
+        </div>
+
+        <div class="chat-card">
+            <div class="chat-header">
+                <div>
+                    <i class="fas fa-robot" style="margin-right: 10px; color: var(--primary-light);"></i>
+                    <span style="font-weight: 600;">Farming Expert Bot</span>
+                </div>
+                <div id="ollama-status">
+                    <span class="status-dot" id="status-dot"></span>
+                    <span id="status-text" style="font-size: 0.9rem; opacity: 0.8;">Groq AI Offline</span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message ai">
+                    Namaste! I am your Farming AI assistant. How can I help you today? I can provide advice on crop
+                    selection, pest control, and modern farming techniques.
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <textarea id="user-input" rows="1" placeholder="Ask anything about farming..."></textarea>
+                <button class="send-btn" id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2026 Farm Swecha. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="llm.js"></script>
+</body>
+
+</html>
